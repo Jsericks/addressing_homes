@@ -8,7 +8,6 @@
 		
 		jQuery(function() {
 			jQuery('#nav-wrapper').height(jQuery("#nav").height());
-			
 			jQuery('#nav').affix({
 				offset: { top: jQuery('#nav').offset().top }
 			});
