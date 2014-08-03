@@ -1222,6 +1222,7 @@ textarea.form-control{
 	margin-bottom:20px;
 	padding-top: 0;
 	margin-right: 5%;
+	font-size: 24px;
 }
 
 .owner .row{
@@ -1422,6 +1423,9 @@ textarea.form-control{
 	.form-control {
 		width: 100%;
 	}
+	.ctc_bttn {
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 800px) {
@@ -1441,7 +1445,7 @@ textarea.form-control{
 		padding-left:0px;
 	}
 	.logo img {
-		padding-left: 20%;
+		margin: 0 auto;
 	}
 	.subtitle{
 		padding-bottom:40px;
@@ -1493,6 +1497,7 @@ textarea.form-control{
 	}
 	.ctc_bttn {
 		font-size: 20px;
+		margin-right: 0;
 	}
 }
 
@@ -1510,7 +1515,7 @@ textarea.form-control{
 		font-weight: 700;
 	}
 	.logo img {
-		padding-left: 10%;
+		margin: 0 auto;
 	}
 	.slider_title {
 		margin: 20px 10px;
@@ -1539,5 +1544,9 @@ textarea.form-control{
 	}
 	.bio img {
 		margin: 20px auto;
+	}
+	.ctc_bttn {
+		font-size: 18px;
+		margin-right: 0;
 	}
 }
