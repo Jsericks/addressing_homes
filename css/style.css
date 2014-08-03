@@ -1440,7 +1440,9 @@ textarea.form-control{
 		padding-top: 20px;
 		padding-left:0px;
 	}
-
+	.logo img {
+		padding-left: 20%;
+	}
 	.subtitle{
 		padding-bottom:40px;
 	}
@@ -1500,12 +1502,15 @@ textarea.form-control{
 		background-image: none;
 		background-color: #233C8D;
 	}
+	.navbar-brand {
+		padding: 5px;
+	}
 	.heading {
 		font-size: 3em;
 		font-weight: 700;
 	}
-	.logo{
-		margin: 0 10px;
+	.logo img {
+		padding-left: 10%;
 	}
 	.slider_title {
 		margin: 20px 10px;
@@ -1527,6 +1532,10 @@ textarea.form-control{
 	}
 	div#about {
 		margin: 0 10px 50px 10px;
+	}
+	div#the_plan {
+
+		margin: 0 10px 10px 10px;
 	}
 	.bio img {
 		margin: 20px auto;
