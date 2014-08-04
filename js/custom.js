@@ -2,9 +2,7 @@
 		"use strict";		
 		
 		/*global jQuery, fakewaffle */ 
-			
 		
-		// jQuery('.nav').onePageNav();
 		
 		jQuery(function() {
 			jQuery('#nav-wrapper').height(jQuery("#nav").height());
@@ -110,7 +108,5 @@
 		(function() {
 			fakewaffle.responsiveTabs(['xs', 'sm']);
 		})(jQuery);	
-
-		// new grid3D( document.getElementById( 'grid3d' ) );
 
 	}());
