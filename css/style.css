@@ -42,6 +42,7 @@ body {
 	/* font-family: 'Source Sans Pro', sans-serif; */
 	color:#000;
 	font-weight:100;
+
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -129,6 +130,7 @@ a:focus{
 .navbar > .container .navbar-brand {
     /* margin-left: -20px; */
 }
+
 .navbar-brand {
     float: left;
     font-size: 18px;
@@ -137,7 +139,11 @@ a:focus{
     margin: 0;
 }
 
-.navbar{
+.navbar-collapse ul {
+	margin-bottom: 0;
+}
+
+.navbar {
 	background: #123241;
 	border:none;
 	border-radius:0;
@@ -150,9 +156,8 @@ a:focus{
   padding-bottom: 21px;
   padding-top: 20px;
   letter-spacing: 0;
-  /*text-transform: uppercase;*/
 }	
-}
+
 
 .nav > li > a:focus{
 	background-color: #123241;
@@ -196,7 +201,8 @@ a:focus{
 .intro{
 	/* background:url(../images/sliderbg.png); */
 	background:url(../images/main.png); 
-	/* background-size:cover; */
+	background-size:cover;
+	background-position: 50% 50%;
 }
 
 .intro .container{
@@ -406,10 +412,12 @@ div#education img {
 .plan {
 	background: #fff;
 }
+.plan_img {
+	margin: 20px 10px;	
+}
 #plan_links h3 {
 	font-family: 'Oswald','Open Sans', sans-serif;
 	color: #233C8D;
-
 }
 #plan_links a {
 	text-decoration: none;
@@ -1215,7 +1223,7 @@ textarea.form-control{
 	background:#233C8D;
 	color:#fff;
 	display:inline-block;
-	width:165px;
+	width: 50%;
 	height:55px;
 	border-radius:0;
 	border:0px;
@@ -1332,6 +1340,9 @@ textarea.form-control{
 /* 14. Footer */
 
 .footer{
+	left: 0;
+	width:100%;
+	position: absolute;
 }
 
 .footer p{
@@ -1424,15 +1435,17 @@ textarea.form-control{
 		width: 100%;
 	}
 	.ctc_bttn {
+		width: 50%;
 		margin-right: 0;
+		font-size: 18px;
 	}
 }
 
 @media (max-width: 800px) {
 
 	.navbar-nav > li > a{
-		padding-bottom: 11px;
-		padding-top: 10px;	
+		padding-bottom: 20px;
+		padding-top: 20px;	
 	}
 	.heading {
 		font-size: 4em;
@@ -1496,7 +1509,7 @@ textarea.form-control{
 		margin: 20px auto;
 	}
 	.ctc_bttn {
-		font-size: 20px;
+		font-size: 16px;
 		margin-right: 0;
 	}
 }
@@ -1506,6 +1519,9 @@ textarea.form-control{
 	.intro {
 		background-image: none;
 		background-color: #233C8D;
+	}
+	div#home {
+		margin-top: 40px;
 	}
 	.navbar-brand {
 		padding: 5px;
@@ -1546,7 +1562,7 @@ textarea.form-control{
 		margin: 20px auto;
 	}
 	.ctc_bttn {
-		font-size: 18px;
+		font-size: 16px;
 		margin-right: 0;
 	}
 }
