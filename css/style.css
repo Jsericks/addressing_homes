@@ -1340,9 +1340,7 @@ textarea.form-control{
 /* 14. Footer */
 
 .footer{
-	left: 0;
-	width:100%;
-	position: absolute;
+	margin-top: 20px;
 }
 
 .footer p{

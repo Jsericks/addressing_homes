@@ -91,7 +91,6 @@
 			
 			
         });
-		
 	
 		// responsive tab
 		
