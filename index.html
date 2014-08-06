@@ -94,7 +94,7 @@
             </div>
             <div class="col-md-4 slider_title">
               <h2 class="animate_top">Learn about the story behind Addressing Homes</h2>
-              <a class="top_btn" href="#">Watch Now</a>
+              <a class="top_btn fancybox-media" href="http://vimeo.com/102573778">Watch Now</a>
             </div>
           </div>
         </div>
@@ -258,6 +258,9 @@
   <link rel="stylesheet" href="lib/fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
   <script src="lib/fancyBox/jquery.fancybox.js"></script>
   <script type="text/javascript" src="lib/fancyBox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+  <!-- videoBG -->
+  <script src="lib/videoBG/jquery.videoBG.js"></script>
   <script>
   $('.fancybox-media')
         .attr('rel', 'media-gallery')
@@ -272,7 +275,20 @@
             media : {},
             buttons : {}
           }
-        });</script>
+        });
+
+        $('div#top').videoBG({
+          position:"relative",
+          scale: false,
+          zIndex:0,
+          mp4:'vids/bg-vid.mp4',
+          ogv:'vids/bg-vid.oggtheora.ogv',
+          webm:'vids/bg-vid.webmsd.webm',
+          poster:'images/main.png',
+          overflow: "hidden",
+          opacity:1
+        });
+        </script>
   
   <script src="js/custom.js"></script>
   </body>

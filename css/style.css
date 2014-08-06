@@ -198,11 +198,10 @@ a:focus{
 }
 
 
-.intro{
+.intro {
 	/* background:url(../images/sliderbg.png); */
-	background:url(../images/main.png); 
-	background-size:cover;
-	background-position: 50% 50%;
+	/*background:url(../images/main.png); */
+	/*background-position: 50% 50%;*/
 }
 
 .intro .container{
@@ -653,6 +652,7 @@ div.bxslider_story h3 {
 	letter-spacing: 0;
 	color: #233C8D;
 }
+
 
 /*.stories .bx-wrapper .bx-pager.bx-default-pager a{
 	display: inline-block;
