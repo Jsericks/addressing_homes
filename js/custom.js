@@ -18,7 +18,6 @@
 			jQuery("#intro-loader").delay(1000).fadeOut();
 			jQuery(".mask").delay(1000).fadeOut("slow");		
 		
-		
 			jQuery('#slides').superslides({
 				animation: 'fade',
 				play:2000,
@@ -27,13 +26,37 @@
 				inherit_height_from: '.top'
 			});			
 				
-            jQuery("#pageLoad").animateNumbers(768, true, 2000);
+      jQuery("#pageLoad").animateNumbers(768, true, 2000);
 						
 			jQuery('.about_us_bg').parallax("50%", 0.2);
 			jQuery('.how_can_you_help_bg').parallax("50%", 0.2);
 			jQuery('.gallery-bg').parallax("50%", 0.2);			
 			jQuery('.contact-bg').parallax("50%", 0.2);			
 
+			// toggle animation for videos
+			$('div#vid1, div#vid2, div#vid3').hover(function(){
+				$(this).find('div.front')
+				.slideToggle("slow");
+			},function(){
+				$(this).find('div.front')
+				.slideToggle("slow");
+			});
+
+			// fancybox for videos
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
 
 			//Elements Appear from top
 			jQuery('.animate_top').each(function() {
