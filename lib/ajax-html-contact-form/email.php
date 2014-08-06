@@ -1,7 +1,7 @@
 <?php
-$subject = $_REQUEST['subject'] . ' : Addressing Homes Contact Form'; // Subject of your email
-$to = "pcannon@addressinghomes.org";  //Recipient's E-mail
-
+$subject = 'Addressing Homes Contact Form: ' . $_REQUEST['email']; // Subject of your email
+$to = "jsericks@gmail.com";  //Recipient's E-mail
+  // change email back to this after honeypot tests -> "pcannon@addressinghomes.org"
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "From: " . $_REQUEST['email'] . "\r\n"; // Sender's E-mail
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -12,8 +12,14 @@ $message .= 'Phone: ' . $_REQUEST['phone'] . "<br><br>";
 $message .= 'Email: ' . $_REQUEST['email'] . "<br><br>";
 $message .= 'Country: ' . $_REQUEST['country'] . "<br><br>";
 
+$honeypot = false;
 
-if (@mail($to, $subject, $message, $headers))
+if ($_REQUEST['subject'] != '') {
+  $honeypot = true;
+}
+
+
+if (!($honeypot == true) && @mail($to, $subject, $message, $headers))
 {
 	// Transfer the value 'sent' to ajax function for showing success message.
 	echo 'sent';
