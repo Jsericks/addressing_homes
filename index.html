@@ -57,6 +57,23 @@
       </div>
     </div>
 
+    <!-- Intro Start -->
+    <div id="top" class="top">
+      <div class="intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-offset-3 col-md-4 col-md-offset-2 text-center animate_left">
+              <div class="logo"><img class="img-responsive" src="images/main-logo.png" alt="logo"></div>
+            </div>
+            <div class="col-md-4 slider_title">
+              <h2 class="animate_top">Learn about the story behind Addressing Homes</h2>
+              <a class="top_btn fancybox-media" href="http://vimeo.com/102573778">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End Intro -->
+
     <!-- Nav Start -->
     <div id="nav-wrapper">
     <div id="nav" class="navbar">
@@ -83,23 +100,6 @@
       </div>    
     </div>
     <!-- Nav End -->
-
-    <!-- Intro Start -->
-    <div id="top" class="top">
-      <div class="intro">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-offset-3 col-md-4 col-md-offset-2 text-center animate_left">
-              <div class="logo"><img class="img-responsive" src="images/main-logo.png" alt="logo"></div>
-            </div>
-            <div class="col-md-4 slider_title">
-              <h2 class="animate_top">Learn about the story behind Addressing Homes</h2>
-              <a class="top_btn fancybox-media" href="http://vimeo.com/102573778">Watch Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- End Intro -->
 
 
     <!-- No Other Place Like Home -->
@@ -279,14 +279,16 @@
 
         $('div#top').videoBG({
           position:"relative",
-          scale: false,
-          zIndex:0,
+          scale: true,
+          height: "100%",
+          width: "100%",
+          zIndex:-1,
           mp4:'vids/bg-vid.mp4',
           ogv:'vids/bg-vid.oggtheora.ogv',
           webm:'vids/bg-vid.webmsd.webm',
           poster:'images/main.png',
-          overflow: "hidden",
-          opacity:1
+          
+          opacity: 1
         });
         $('video').attr('muted',true);
         </script>
