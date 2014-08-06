@@ -346,11 +346,11 @@ a:focus{
 	padding:5px 10px;
 }
 
-.welcome_txt_sub p {
+p.welcome_txt_sub {
 	font-family: 'Open Sans', 'Oswald', sans-serif;
 	font-weight: 400;
 	color: #666666;
-	font-size: 12px;
+	font-size: 16px;
 	padding: 10px;
 }
 /* 5. Helping children to educate */
