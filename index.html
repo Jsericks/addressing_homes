@@ -117,7 +117,12 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-md-12 heading dark animate_top"><span>No other place like home</span></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 welcome_txt_sub text-center">
+            <p>See below for additional videos from Addressing Homes</p>
           </div>
+        </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 b1" id="vid1">
             <div class="front">
@@ -255,6 +260,21 @@
   <link rel="stylesheet" href="lib/fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
   <script src="lib/fancyBox/jquery.fancybox.js"></script>
   <script type="text/javascript" src="lib/fancyBox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+  <script>
+  $('.fancybox-media')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+          openEffect : 'none',
+          closeEffect : 'none',
+          prevEffect : 'none',
+          nextEffect : 'none',
+
+          arrows : false,
+          helpers : {
+            media : {},
+            buttons : {}
+          }
+        });</script>
   
   <script src="js/custom.js"></script>
   </body>
