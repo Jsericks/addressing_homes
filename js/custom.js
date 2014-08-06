@@ -20,7 +20,7 @@
 		
 			jQuery('#slides').superslides({
 				animation: 'fade',
-				play:2000,
+				play:false,
 				pagination:false,
 				inherit_width_from: '.top',
 				inherit_height_from: '.top'

@@ -51,11 +51,26 @@
     <!-- Slide images -->
     <div id="slides">
       <div class="slides-container">
-        <img src="images/slider/slider3.jpg" alt="slider1">
-        <img src="images/slider/slider2.jpg" alt="slider2">
-        <img src="images/slider/slider1.jpg" alt="slider3">
+        <img src="images/main.png" alt="slider1">
       </div>
     </div>
+
+    <!-- Intro Start -->
+    <div id="top" class="top">
+      <div class="intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-offset-3 col-md-4 col-md-offset-2 text-center animate_left">
+              <div class="logo"><img class="img-responsive" src="images/main-logo.png" alt="logo"></div>
+            </div>
+            <div class="col-md-4 slider_title">
+              <h2 class="animate_top">Learn about the story behind Addressing Homes</h2>
+              <a class="top_btn fancybox-media" href="http://vimeo.com/102573778">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End Intro -->
 
     <!-- Nav Start -->
     <div id="nav-wrapper">
@@ -83,23 +98,6 @@
       </div>    
     </div>
     <!-- Nav End -->
-
-    <!-- Intro Start -->
-    <div id="top" class="top">
-      <div class="intro">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-offset-3 col-md-4 col-md-offset-2 text-center animate_left">
-              <div class="logo"><img class="img-responsive" src="images/main-logo.png" alt="logo"></div>
-            </div>
-            <div class="col-md-4 slider_title">
-              <h2 class="animate_top">Learn about the story behind Addressing Homes</h2>
-              <a class="top_btn" href="#">Watch Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- End Intro -->
 
 
     <!-- No Other Place Like Home -->
@@ -258,6 +256,9 @@
   <link rel="stylesheet" href="lib/fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
   <script src="lib/fancyBox/jquery.fancybox.js"></script>
   <script type="text/javascript" src="lib/fancyBox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+  <!-- videoBG -->
+  <script src="lib/videoBG/jquery.videoBG.js"></script>
   <script>
   $('.fancybox-media')
         .attr('rel', 'media-gallery')
@@ -272,7 +273,22 @@
             media : {},
             buttons : {}
           }
-        });</script>
+        });
+
+        $('div#top').videoBG({
+          position:"relative",
+          scale: true,
+          height: "100%",
+          width: "100%",
+          zIndex:-1,
+          mp4: "docs/bg-vid.mp4",
+          ogv: "docs/bg-vid.oggtheora.ogv",
+          webm: "docs/bg-vid.webmsd.webm",
+          poster: "images/main.png",
+          opacity: 1
+        });
+        $('video').attr('muted',true).addClass('hidden-xs');
+        </script>
   
   <script src="js/custom.js"></script>
   </body>
