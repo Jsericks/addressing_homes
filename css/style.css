@@ -1391,6 +1391,31 @@ textarea.form-control{
 	color:#999;
 }
 
+/* Flips for videos */
+div#vid1,
+div#vid2,
+div#vid3 {
+	position: relative;
+}
+div.front {
+	z-index: 300;
+	position:absolute;
+}
+div.back > img {
+	z-index:100;
+}
+div.back {
+	top: 0;
+	left: 0;
+	margin: 6px;
+	background-color: #F2F2F2;
+}
+div.back > p {
+	position: absolute;
+	
+}	
+
+
 
 /* 16. Custom Media Query */
 @media (max-width: 980px) {
