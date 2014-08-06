@@ -1,7 +1,7 @@
 <?php
 $subject = 'Addressing Homes Contact Form: ' . $_REQUEST['email']; // Subject of your email
-$to = "jsericks@gmail.com";  //Recipient's E-mail
-  // change email back to this after honeypot tests -> "pcannon@addressinghomes.org"
+$to = "pcannon@addressinghomes.org";  //Recipient's E-mail
+  
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "From: " . $_REQUEST['email'] . "\r\n"; // Sender's E-mail
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
