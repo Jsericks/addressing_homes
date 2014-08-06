@@ -36,11 +36,27 @@
 			// toggle animation for videos
 			$('div#vid1, div#vid2, div#vid3').hover(function(){
 				$(this).find('div.front')
-				.toggle("slow");
+				.slideToggle("slow");
 			},function(){
 				$(this).find('div.front')
-				.toggle("slow");
+				.slideToggle("slow");
 			});
+
+			// fancybox for videos
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
 
 			//Elements Appear from top
 			jQuery('.animate_top').each(function() {
