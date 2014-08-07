@@ -43,7 +43,7 @@
     
     <link href="lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet" >
 
-    <script src="http://www.jsericks.tumblr.com/api/read/json"></script> 
+    <script src="http://www.addressinghomes.tumblr.com/api/read/json"></script> 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

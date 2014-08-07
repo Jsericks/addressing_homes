@@ -6,14 +6,14 @@
 		
 		jQuery(function() {
 			jQuery('#nav-wrapper').height(jQuery("#nav").height());
-			jQuery('#nav').affix({
-				offset: { top: jQuery('#nav').offset().top }
-			});
+			// jQuery('#nav').affix({
+			// 	offset: { top: jQuery('#nav').offset().top }
+			// });
 		});		
 		
 		// animation number
 		
-        jQuery(document).ready(function() {
+      jQuery(document).ready(function() {
 		
 			jQuery("#intro-loader").delay(1000).fadeOut();
 			jQuery(".mask").delay(1000).fadeOut("slow");		

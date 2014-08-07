@@ -8,7 +8,7 @@ jQuery(function(){
 
   $.each(tumblr_api_read["posts"],function(i){
     var counter = i + 1;
-    var cont_one = [1,3,5,6,7,8];
+    var cont_one = [1,3,5,6,7,8,10,12];
     // Disembodied elements for the loop
     var $clearfix_two = $('<div class="clearfix visible-sm-block hidden-md hidden-lg"></div>');
     var $clearfix_three = $('<div class="clearfix visible-md-block hidden-xs hidden-sm hidden-lg"></div>');
