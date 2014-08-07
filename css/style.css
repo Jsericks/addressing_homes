@@ -60,10 +60,10 @@ h2{
 }
 
 p{
-    color: #FFFFFF;
+  color: #FFFFFF;
 	font-size:14px;
 	line-height:26px;
-    font-weight: 300;
+  font-weight: 300;
 	letter-spacing: 0.05em;
 	margin: 0 0 20px;
 }
@@ -336,6 +336,7 @@ a:focus{
   font-size: 20px;
   line-height: 34px;
 	padding-top:30px;
+	letter-spacing: 0;
 }
 
 .welcome_txt span{
@@ -1547,7 +1548,7 @@ div.back {
 		background-color: #233C8D;
 	}
 	div#home {
-		display: inline-block;
+		clear: both;
 		margin-top: 40px;
 	}
 	.navbar-brand {
