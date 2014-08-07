@@ -60,10 +60,10 @@ h2{
 }
 
 p{
-    color: #FFFFFF;
+  color: #FFFFFF;
 	font-size:14px;
 	line-height:26px;
-    font-weight: 300;
+  font-weight: 300;
 	letter-spacing: 0.05em;
 	margin: 0 0 20px;
 }
@@ -190,6 +190,7 @@ a:focus{
 
 #top{
 	position:absolute;
+	padding-top: 61px;
 	top:0;
 	width:100%;
 	height: 100%;
@@ -336,6 +337,7 @@ a:focus{
   font-size: 20px;
   line-height: 34px;
 	padding-top:30px;
+	letter-spacing: 0;
 }
 
 .welcome_txt span{
@@ -548,6 +550,26 @@ div.blog_entries > div.blog_entry_container.two h6 {
 	margin-bottom: 0;
 	color: #233C8D;
 }
+
+	p#blog-date {
+		font-family: 'Open Sans', 'Oswald', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		color: #000;
+	}
+	#blog_body p {
+		color: #000;
+		font-family: 'Open Sans', 'Oswald', sans-serif;
+		font-size: 1.2em;
+		font-weight: 100;
+		line-height: 1.4em;
+
+		letter-spacing: 0;
+	}
+	#blog_body img {
+		width: 100%;
+		margin: 20px auto;
+	}
 
 /* END BLOG CSS */
 
@@ -1419,6 +1441,13 @@ div.back {
 	margin: 6px;
 }
 
+/* Hacky slides solution */
+div.slides > 
+div.slides-control >
+div.slides-controller >
+div {
+	height: 90%;
+}
 
 /* 16. Custom Media Query */
 @media (max-width: 980px) {
@@ -1530,6 +1559,7 @@ div.back {
 	div.blog_entries > div.blog_entry_container {
 		margin-bottom: 10px;
 	}
+
 	.bio img {
 		margin: 20 auto;
 	}
@@ -1549,8 +1579,11 @@ div.back {
 		background-color: #233C8D;
 	}
 	div#home {
-		display: inline-block;
+		clear: both;
 		margin-top: 40px;
+	}
+	#top {
+		padding-top: 54px;
 	}
 	.navbar-brand {
 		padding: 5px;

@@ -1,3 +1,12 @@
+<?php
+  if (isset($_GET['id'])) {
+    $blog_id = intval($_GET['id']);
+  }
+  if (($blog_id != 0) && empty($blog_id)){
+    header("Location: blogs.html");
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +17,7 @@
     <link rel="shortcut icon" href="images/ico/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="images/ico/favicon.ico">
 
-    <title>Addressing Homes | Contact</title>
+    <title>Addressing Homes | Home</title>
     
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -32,13 +41,17 @@
     <link href="lib/3DGridEffect/css/component.css" rel="stylesheet" />
     <script src="lib/3DGridEffect/js/modernizr.custom.js"></script>   
     
-    <link href="lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet" > 
+    <link href="lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet" >
+
+    <script src="http://www.addressinghomes.tumblr.com/api/read/json"></script> 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+    
+    
   </head>
   <body>
     <!-- Mask -->
@@ -46,6 +59,7 @@
       <div id="intro-loader">
       </div>    
     </div>
+
     <!-- Nav Start -->
     <div id="nav-wrapper">
     <div id="nav" class="navbar">
@@ -57,74 +71,59 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand"><img src="images/nav-logo.png" alt="logo"></div>
+        <div class="navbar-brand"><img class="img-responsive" src="images/nav-logo.png" alt="logo"></div>
         </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.html">Home</a></li>
               <li><a href="plan.html">The Plan</a></li>
-              <li><a href="blogs.html">Blog</a></li> 
+              <li class="current"><a href="blogs.html">Blog</a></li> 
               <li><a href="about.html">About Us</a></li>  
-              <li class="current"><a href="contact.html">Contact Us</a></li>  
+              <li><a href="contact.html">Contact Us</a></li>  
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>    
     </div>
     <!-- Nav End -->
-    <!-- Contact Form -->
-    <div class="contact-bg" id="contact">
-      <div class="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center heading animate_top"><span class="brd">WE'D LOVE TO HEAR FROM YOU</span></div>
-            <!-- Start Form -->
-            <form name="contactForm" id='contact_form' method="post" action='lib/ajax-html-contact-form/email.php'>
-              <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 contact_form animate_left">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- Name -->
-                      <label for="name">Your Name</label>
-                      <div id='name_error' class='error'><img src='images/error.png' alt="img">Please enter your name.</div>
-                      <input type="text"  name='name' id='name' class="form-control" placeholder="Your name">
-                      <!-- Country -->
-                      <label for="country">Country</label>
-                      <div id='country_error' class='error'><img src='images/error.png' alt="img">Please enter your country.</div>
-                      <input type="text"  name='country' id='country' class="form-control" placeholder="Country">
-                      <!-- Phone Number -->
-                      <label for="phone">Phone Number</label>
-                      <div id='phone_error' class='error'><img src='images/error.png' alt="img">Please enter your phone number.</div>
-                      <input type="text"  name='phone' id='phone' class="form-control" placeholder="Phone Number">
-                      <!-- Email Address -->
-                      <label for="email">Email Address</label>
-                      <div id='email_error' class='error'><img src='images/error.png' alt="img">Please enter your email address.</div>
-                      <input type="text"  name='email' id='email' class="form-control" placeholder="Email Address">
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="message">Message</label>
-                      <div id='message_error' class='error'><img src='images/error.png' alt="img">Please enter your message.</div>
-                      <textarea name='message' id='message' class="form-control" placeholder="Message"></textarea>
-                                
-                      <button class="ctc_bttn pull-right" id='send_message' type="submit">Send Message</button>
-                      <div id='mail_success' class='success'><img src='images/success.png' alt="img">Your message has been sent successfully.</div>
-                      <div id='mail_fail' class='error'><img src='images/error.png' alt="img"> Sorry, error occured this time sending your message.</div>
-                      <div class="sr-only">
-                        <label for="subject">Leave Blank Please</label>
-                        <input type="text" name="subject" id="subject" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1"></div>
-              </div>
-            </form> <!-- End Form -->
+
+    <!-- Display Blog -->
+    <div class="education" id="education">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 heading dark text-center animate_top" id="blog_title">
+            <!-- title to be appended -->
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10 welcome_txt text-left animate_bottom" id="blog_body">
+
+          </div>
+          <div class="col-md-1"></div>
       </div>
     </div>
-    <!-- End Contact -->
+      </div>
+    </div>
+    <!-- End Display Blog -->
+
+    <!-- links to next -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <a  id="nav-prev" class="pull-left" href='blog.php?id=<?php echo ($blog_id - 1); ?>'>
+            <img class="img-responsive" src="images/arrow-left.png" alt="previous blog">
+          </a>
+          <a id="nav-next" class="pull-right" href='blog.php?id=<?php echo ($blog_id + 1); ?>'>
+            <img class="img-responsive" src="images/arrow-right.png" alt="next blog">
+          </a>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <!-- End links to next -->
+
     <!-- Footer -->
     <div class="footer">
     <div class="container">
@@ -173,5 +172,21 @@
   <script src="lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
   
   <script src="js/custom.js"></script>
+  <script>
+    var num_blogs = tumblr_api_read["posts"].length;
+    if ((<?php echo $blog_id; ?> - 1) < 0){
+      $('a#nav-prev').attr("href","blogs.html");
+    }
+    if ((<?php echo $blog_id + 1;  ?> >= num_blogs)){
+      $('a#nav-next').attr('href',"blogs.html");
+    }
+    console.log(tumblr_api_read["posts"][<?php echo $blog_id; ?>]);
+    var curBlog = tumblr_api_read["posts"][<?php echo $blog_id; ?>];
+    var $title = $("<span>" + curBlog["regular-title"] + "</span>" + '<br><p id="blog-date">' + curBlog["date"] + "</p>");
+    var $blogBody = curBlog["regular-body"];
+    $('#blog_title').append($title);
+    $('#blog_body').append($blogBody);
+    
+  </script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 jQuery(function(){
-  // tumblr_api_read variable is set from the blog.html include
+  // tumblr_api_read variable is set from the blogs.html include
 
   // Get the blog_entries div and create necessarcy disembodieds
   var $blog_container = $(".blog_entries");
@@ -8,7 +8,7 @@ jQuery(function(){
 
   $.each(tumblr_api_read["posts"],function(i){
     var counter = i + 1;
-    var cont_one = [1,3,5,6,7,8];
+    var cont_one = [1,3,5,6,7,8,10,12];
     // Disembodied elements for the loop
     var $clearfix_two = $('<div class="clearfix visible-sm-block hidden-md hidden-lg"></div>');
     var $clearfix_three = $('<div class="clearfix visible-md-block hidden-xs hidden-sm hidden-lg"></div>');
@@ -20,6 +20,7 @@ jQuery(function(){
     var $title_arrow = $('<img class="img-responsive pull-right" src="images/arrow-white.png" alt="arrow right">');
     var $disp_blurb = $('<p></p>');
     var $blog_link = $('<a href="#"></a>');
+    var link = "blog.php?id=" + i;
     var selected = '';
 
     // Tumblr content
@@ -30,6 +31,8 @@ jQuery(function(){
     // insert values into partials
     $title.text($blog_title);
     $disp_blurb.text($blurb);
+    $blog_link.attr("href",link);
+    console.log($blog_link);
 
     if ($.inArray(counter, cont_one) !== -1) {
       selected = $blog_entry_container_one;
@@ -57,4 +60,5 @@ jQuery(function(){
       $blog_container.append($clearfix_three);
     }
   });
+  
 }());
