@@ -550,6 +550,26 @@ div.blog_entries > div.blog_entry_container.two h6 {
 	color: #233C8D;
 }
 
+	p#blog-date {
+		font-family: 'Open Sans', 'Oswald', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		color: #000;
+	}
+	#blog_body p {
+		color: #000;
+		font-family: 'Open Sans', 'Oswald', sans-serif;
+		font-size: 1.2em;
+		font-weight: 100;
+		line-height: 1.4em;
+
+		letter-spacing: 0;
+	}
+	#blog_body img {
+		width: 100%;
+		margin: 20px auto;
+	}
+
 /* END BLOG CSS */
 
 .education .fa{
@@ -1529,6 +1549,7 @@ div.back {
 	div.blog_entries > div.blog_entry_container {
 		margin-bottom: 10px;
 	}
+
 	.bio img {
 		margin: 20 auto;
 	}
