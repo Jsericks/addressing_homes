@@ -1579,6 +1579,9 @@ div {
 		background-image: none;
 		background-color: #233C8D;
 	}
+	.intro .container {
+		padding: 10% 0;
+	}
 	div#home {
 		clear: both;
 		margin-top: 40px;
@@ -1595,6 +1598,9 @@ div {
 	.heading {
 		font-size: 3em;
 		font-weight: 700;
+	}
+	.logo {
+		margin-top:10px;
 	}
 	.logo img {
 		margin: 0 auto;
